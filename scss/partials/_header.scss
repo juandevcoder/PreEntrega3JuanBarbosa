@@ -1,0 +1,115 @@
+/*HEADER*/
+
+header{
+    background-color: $secondary;
+    padding: $sp-sm;
+
+    .navbar{
+        @include flex(row, wrap, space-between, center, 0);
+        align-content: center;
+
+        .navbar__img{
+            max-width: 100%;
+            width: $width-navimg;
+        }
+
+        .hamburguer{
+            display: none;
+            width: $width-hamb;
+            height: $width-hamb;
+        }
+
+        .checkevent{
+            display: none;
+            position: absolute;
+            width: $width-hamb;
+            height: $width-hamb;
+            right: 0;
+            top: 10px;
+            opacity: 0;
+        }
+
+        .menu{
+            display: flex;
+            align-items: center;
+    
+            .menu__link{
+                padding: $sp-xs $sp-xs;
+                transition: all .5s ease-in-out;
+                font-size: map-get($text-txt, tsize);
+
+                &--active{
+                    @extend .menu__link;
+                    border-bottom: 3px solid $accent;
+                    color: $light;
+                }
+
+                &:hover{
+                    transition: all .5s ease-in-out;
+                    background-color: $accent;
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    /* HEADER */
+    
+    header .navbar {
+
+        .navbar__img{
+            max-width: 100%;
+            width: $width-navimg - 121px; //300px
+        }
+
+        .menu .menu__link{
+            font-size: map-get($small-txt, tsize);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) { 
+    
+    /* HEADER */
+      
+    header .navbar{
+
+        .hamburguer, .checkevent{
+            display: block;
+        }
+
+        .checkevent:checked + .menu {
+            display: block;
+        }
+
+        .menu{
+            display: none;
+            align-content: center;
+            flex-basis: 100%;
+            text-align: right;
+        }  
+    }
+}
+
+@media screen and (max-width: 576px) { 
+
+  
+    /* HEADER */
+
+    header .navbar{
+
+        .navbar__img{
+            max-width: 100%;
+            width: $width-navimg - 221px; //200px
+        }
+    
+        .hamburguer, .checkevent{
+            width: $width-hamb - 20px; //40px
+            height: $width-hamb - 20px;
+        }
+    }
+}
+  

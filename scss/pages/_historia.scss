@@ -1,0 +1,99 @@
+/* HISTORIA */
+
+#historia{
+    padding-top: $sp-lg;
+    padding-bottom: $sp-lg;
+
+    div{
+        @include flex(row, no-wrap, flex-start, stretch, $sp-md);
+        color: $primary;
+
+        .historia__article{
+            flex: 1 1 50%;
+
+            .historia__title{
+                font-size: map-get($title-txt, tsize);
+                font-weight: map-get($title-txt, tweight);
+                margin-bottom: $sp-lg;
+            }
+            
+            .historia__highlight{
+                font-size: map-get($highlight-txt, tsize);
+                font-weight: map-get($highlight-txt, tweight);
+                margin-bottom: $sp-md;
+            }
+            
+            .historia__highlight_last{
+                font-size: map-get($text-txt , tsize);
+                font-weight: map-get($highlight-txt, tweight);
+            }
+            
+            .historia__text{
+                font-size: map-get($small-txt , tsize);
+                font-weight: map-get($small-txt , tweight);
+                margin-bottom: $sp-md;
+            }
+            
+            .historia__text_last{
+                font-size: map-get($small-txt , tsize);
+                font-weight: map-get($small-txt , tweight);
+            }            
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+  
+    /* HISTORIA */
+    #historia div{
+        @include flex(column, no-wrap, flex-start, stretch, $sp-md);
+
+        .historia__article{
+
+            .historia__title{
+                font-size: map-get($highlight-txt, tsize);
+                text-align: map-get($highlight-txt, talign);
+                margin-bottom: $sp-sm;
+            }
+            
+            .historia__highlight{
+                font-size: map-get($text-txt , tsize);
+                margin-bottom: $sp-sm;
+                text-align: center;
+            }
+        
+            .historia__highlight_last{
+                font-size: map-get($small-txt , tsize);
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) { 
+  
+    /* HISTORIA */
+
+    #historia div .historia__article{
+        
+        .historia__title{
+            font-size: map-get($text-txt, tsize);
+        }
+    
+        .historia__highlight{
+            font-size: map-get($small-txt , tsize);
+        }
+    
+        .historia__highlight_last{
+            font-size: map-get($xsmall-txt, tsize);
+        }
+    
+        .historia__text{
+            font-size: map-get($xsmall-txt, tsize);
+        }
+        
+        .historia__text_last{
+            font-size: map-get($xsmall-txt, tsize);
+        }
+    }
+}

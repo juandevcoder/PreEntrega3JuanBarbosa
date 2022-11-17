@@ -1,0 +1,45 @@
+/* NORMALIZE */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: $text-sm;
+    color: $dark;
+    line-height: 1.2;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    font-size: $text-sm;
+    text-decoration: none;
+    color: $primary;
+    display: inline-block;
+}
+
+p{
+    font-size: $text-sm;
+}
+
+.bgr-accent{
+    background-color: $accent;
+}
+
+.bgr-primary{
+    background-color: $primary;
+}
+
+.bgr-light{
+    background-color: $light;
+}

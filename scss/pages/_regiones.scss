@@ -1,0 +1,76 @@
+/* REGIONES */
+
+#regiones{
+    padding: $sp-lg;
+
+    div{
+        @include flex(column, no-wrap, flex-start, stretch, $sp-md);
+
+        .regiones__title{
+            font-size: map-get($title-txt, tsize);
+            text-align: map-get($title-txt, talign);
+            font-weight: map-get($title-txt, tweight);
+            color: $primary;
+        }
+    
+        .regiones__item{
+            text-align: center;
+            color: $primary;
+    
+            .regiones__img{
+                max-width: 100%;
+                width: 250px;
+            }
+            
+            &_text{
+                font-size: map-get($highlight-txt, tsize);
+                font-weight: map-get($highlight-txt, tweight);
+                text-align: map-get($highlight-txt, talign);
+            }    
+        }
+    }
+}
+
+/* MEDIAS QUERIES*/
+
+@media screen and (max-width: 992px) {
+    
+    /* REGIONES */
+
+    #regiones div .regiones__item{
+
+        &_text {
+            font-size: map-get($text-txt, tsize);
+            font-weight: map-get($text-txt, tweight);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) { 
+
+    /* REGIONES */
+
+    #regiones div{
+
+        .regiones__title{
+            font-size: map-get($highlight-txt , tsize);
+            font-weight: map-get($highlight-txt , tweight);
+        }    
+    }
+}
+
+@media screen and (max-width: 576px) { 
+  
+    /* REGIONES */
+
+    #regiones div{
+        
+        .regiones__title{
+            font-size: map-get($text-txt, tsize);
+        }
+    
+        .regiones__item .regiones__item_text{
+            font-size: map-get($small-txt , tsize);
+        }
+    }
+}

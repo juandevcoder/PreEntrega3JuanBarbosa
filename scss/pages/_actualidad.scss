@@ -1,0 +1,76 @@
+/* ACTUALIDAD */
+
+#actualidad{
+    padding: $sp-md;
+
+    div{
+        @include flex(column, no-wrap, flex-start, stretch, $sp-md);
+        
+        .actualidad__title{
+            font-size: map-get($title-txt, tsize);
+            text-align: map-get($title-txt, talign);
+            font-weight: map-get($title-txt, tweight);
+            color: $accent;
+        }
+        
+        .actualidad__images{
+            @include flex(row, wrap, space-evenly, center, 0);
+            
+            .actualidad__img{
+                max-width: 100%;
+                width: $width-act;
+            }
+
+            .actualidad__item{
+                position: relative;
+                text-align: center;
+                color: $primary;
+                
+                &_text{
+                    position: absolute;
+                    top: 50%;
+                    left: 20%;
+                    transform: translate(-5%, -50%);
+                    font-size: map-get($text-txt, tsize);
+                    font-weight: map-get($highlight-txt, tweight);
+                    text-align: map-get($highlight-txt, talign);
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) { 
+
+    /* ACTUALIDAD */
+
+    #actualidad div{
+
+        .actualidad__title{
+            font-size: map-get($text-txt, tsize);
+        }
+        
+        .actualidad__images {
+            .actualidad__img {
+                max-width: 100%;
+                width: $width-act - 43px; //245px
+            }
+
+            .actualidad__item{
+                &_text{
+                    font-size: map-get($small-txt, tsize);
+                }
+            }
+        } 
+    }  
+}
+
+@media screen and (max-width: 576px) { 
+
+    /* ACTUALIDAD */
+
+    #actualidad div .actualidad__title{
+        font-size: $text-sm;
+    }
+}

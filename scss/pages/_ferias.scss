@@ -1,0 +1,224 @@
+/* FERIAS */
+
+#ferias{
+    padding-top: $sp-lg;
+    padding-bottom: $sp-lg;
+
+    div{
+        @include flex(column, no-wrap, flex-start, stretch, $sp-md);
+        color: $primary;
+
+        .ferias__title{
+            font-size: map-get($title-txt, tsize);
+            text-align: map-get($title-txt, talign);
+            font-weight: map-get($title-txt, tweight);
+            margin-bottom: $sp-md;
+            color: $accent;
+        }
+        
+        .ferias__highlight{
+            font-size: map-get($highlight-txt, tsize);
+            font-weight: map-get($highlight-txt, tweight);
+            text-align: map-get($highlight-txt, talign);
+            color: $dark;
+        }
+    
+        .ferias__images{
+            display: grid;
+            gap: $sp-xs;
+            grid-template-columns: repeat(4, $width-fer);
+            grid-template-rows: repeat(2, $width-fer);
+            place-content: center;
+    
+            .ferias__item:nth-of-type(1){
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row: 1 / 2;
+            }
+            
+            .ferias__item:nth-of-type(2){
+                grid-column: 3;
+            }
+            
+            .ferias__item:nth-of-type(3){
+                grid-column: 4;
+            }
+            
+            .ferias__item:nth-of-type(4){
+                grid-column: 3;
+            }
+            
+            .ferias__item:nth-of-type(5){
+                grid-column: 4;
+            }
+    
+            .ferias__item{
+                position: relative;
+                color: $primary;
+                text-align: center;
+    
+                .ferias__img_p{
+                    width: $width-fer*2 + 8px; //576px
+                }
+    
+                .ferias__img{
+                    max-width: 100%;
+                    width: $width-fer;
+                }
+    
+                &_text{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    font-size: map-get($text-txt, tsize);
+                    font-weight: map-get($highlight-txt, tweight);
+                } 
+            }
+        }
+    }    
+}
+
+/* MEDIAS QUERIES*/
+
+@media screen and (max-width: 1200px) {
+
+    /* FERIAS */
+
+    #ferias div .ferias__images{
+        display: grid;
+        gap: $sp-sm;
+        grid-template-columns: repeat(3, $width-fer);
+        grid-template-rows: repeat(3, $width-fer);
+
+        .ferias__item:nth-of-type(1){
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        
+        .ferias__item:nth-of-type(2){
+            grid-column: 3;
+        }
+        
+        .ferias__item:nth-of-type(3){
+            grid-column: 1;
+            grid-row: 3;
+        }
+        
+        .ferias__item:nth-of-type(4){
+            grid-column: 3;
+        }
+        
+        .ferias__item:nth-of-type(5){
+            grid-column: 2;
+            grid-row: 3;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    /* FERIAS */
+
+    #ferias div{
+
+        .ferias__title{
+            font-size: map-get($highlight-txt, tsize);
+        }
+        
+        .ferias__highlight{
+            font-size: map-get($text-txt, tsize);
+        }
+
+        .ferias__images{
+            display: grid;
+            gap: $sp-sm;
+            grid-template-columns: repeat(2, $width-fer);
+            grid-template-rows: repeat(4, $width-fer);
+            place-content: center;
+    
+            .ferias__item:nth-of-type(1){
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+            
+            .ferias__item:nth-of-type(2){
+                grid-column: 1;
+                grid-row: 3;
+            }
+            
+            .ferias__item:nth-of-type(3){
+                grid-column: 1;
+                grid-row: 4;
+            }
+            
+            .ferias__item:nth-of-type(4){
+                grid-column: 2;
+                grid-row: 3;
+            }
+            
+            .ferias__item:nth-of-type(5){
+                grid-column: 2;
+                grid-row: 4;
+            }
+    
+            .ferias__item{
+                position: relative;
+                text-align: center;
+                color: $primary;
+    
+                &_text{
+                    position: absolute;
+                    top: 50%;
+                    left: 30%;
+                    transform: translate(-20%,-50%);
+                }
+            } 
+        }
+
+    }
+}
+
+@media screen and (max-width: 768px) { 
+
+    /* FERIAS */
+    
+    #ferias div{
+
+        .ferias__highlight{
+            font-size: map-get($small-txt, tsize);
+        }
+    }
+}
+
+@media screen and (max-width: 576px) { 
+
+    /* FERIAS */
+
+    #ferias div{
+        .ferias__title{
+            font-size: map-get($text-txt, tsize);
+        }
+    
+        .ferias__images{
+            @include flex(row, wrap, space-evenly, center, 0);
+
+            .ferias__item {
+
+                .ferias__img_p{
+                    max-width: 100%;
+                    width: $width-fer;
+                }
+
+                &_text{
+                    font-size: map-get($small-txt, tsize);
+                }
+            }   
+        }
+    }
+}
+    

@@ -1,0 +1,68 @@
+/*VARIABLE*/
+
+    /*Palette*/
+    $primary: #FEFEFE;
+    $secondary: #0A244F;
+    $accent: #E60F4B;
+    $light: #109FDA;
+    $dark: #3b444f;
+
+    /*Font Sizes*/
+    $text-xxl: 4.8em;
+    $text-xl: 3.4em;
+    $text-lg: 2.8em;
+    $text-md: 2.2em;
+    $text-sm: 1.6em;
+    $text-xs: 1.2em;
+    $text-xxs: 0.8em;
+
+    /*Spacings*/
+    $sp-xxl: 12rem;
+    $sp-xl: 8rem;
+    $sp-lg: 5rem;
+    $sp-md: 3.2rem;
+    $sp-sm: 1.6rem;
+    $sp-xs: 0.8rem;
+
+    /* Text Sizes */
+    $title-txt: (
+        tsize: $text-lg,
+        talign: center,
+        tweight: 500
+    );
+
+    $highlight-txt: (
+        tsize: $text-md,
+        talign: center,
+        tweight: 400
+    );
+
+    $text-txt: (
+        tsize: $text-sm,
+        talign: right,
+        tweight: 300
+    );
+
+    $small-txt: (
+        tsize: $text-xs,
+        talign: right,
+        tweight: 300
+    );
+
+    $xsmall-txt: (
+        tsize: $text-xxs,
+        talign: right,
+        tweight: 300 
+    );
+
+    /* Images */
+    //Ferias
+    $width-fer: 286px;
+    //Actualidad
+    $width-act: 288px;
+    //Header
+    $width-hamb: 60px;
+    $width-navimg: 421px;
+    //Footer
+    $width-foot: 100px;
+

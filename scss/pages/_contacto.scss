@@ -1,0 +1,60 @@
+/* CONTACTO */
+
+#contacto{
+    padding: $sp-md;
+
+    .contacto__title{
+        font-size: map-get($title-txt, tsize);
+        text-align: map-get($title-txt, talign);
+        font-weight: map-get($title-txt, tweight);
+        color: $accent;
+        margin-bottom: $sp-sm;
+    }
+    
+    .contacto__highlight{
+        font-size: map-get($text-txt, tsize);
+        font-weight: map-get($highlight-txt, tweight);
+        color: $dark;
+        margin-bottom: $sp-sm;
+    }
+    
+    .contacto__text{
+        font-size: map-get($small-txt, tsize);
+        font-weight: map-get($small-txt, tweight);
+        color: $dark;
+    }
+}
+
+@media screen and (max-width: 768px) { 
+
+    /* CONTACTO */
+
+    #contacto {
+        .contacto__title{
+            font-size: map-get($highlight-txt, tsize);
+        }
+
+        .contacto__highlight{
+            font-size: map-get($small-txt, tsize);
+        }
+
+        .contacto__text{
+            font-size: map-get($xsmall-txt, tsize);
+        }
+    }
+}
+
+@media screen and (max-width: 576px) { 
+
+    /* CONTACTO */
+
+    #contacto {
+        .contacto__title{
+            font-size: map-get($text-txt, tsize);
+        }
+        
+        .contacto__highlight{
+            font-size: map-get($xsmall-txt, tsize);
+        }
+    }
+}

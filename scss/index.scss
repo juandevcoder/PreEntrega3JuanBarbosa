@@ -1,0 +1,25 @@
+// IMPORTS
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+
+
+// MISC
+
+@import './misc/variable';
+@import './misc/normalize';
+@import './misc/mixins';
+
+// PARTIALS
+
+@import './partials/header';
+@import './partials/footer';
+
+// PAGES
+
+@import './pages/index';
+@import './pages/historia';
+@import './pages/ferias';
+@import './pages/regiones';
+@import './pages/actualidad';
+@import './pages/contacto'
+

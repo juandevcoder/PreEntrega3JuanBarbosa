@@ -1,0 +1,99 @@
+/*FOOTER*/
+
+footer{
+    background-color: $secondary;
+    padding: $sp-sm;
+
+    .navbar__footer{
+        @include flex(row, wrap, space-between, center, 0);
+        align-content: center;
+
+        &_img{
+            max-width: 100%;
+            width: $width-foot;
+        }
+
+        .menu__footer{
+            //@include flex(row, no-wrap, space-between, center, 0);
+    
+            &_link{
+                padding: $sp-xs $sp-xs;
+                transition: all .5s ease-in-out;
+                font-size: map-get($text-txt, tsize);
+
+                &--active{
+                    @extend .menu__footer_link;
+                    border-bottom: 3px solid $accent;
+                    color: $light;
+                }
+
+                &:hover{
+                    background-color: $accent;
+                    color: $primary;
+                    transition: all .5s ease-in-out;
+                }
+            }
+        }
+    
+        .text__footer{
+            //@include flex(column, no-wrap, flex-start, stretch, 0);
+            color: $dark;
+            flex-basis: 100%;
+            text-align: center;
+    
+            &_p{
+                font-size: map-get($text-txt, tsize);
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    /* FOOTER */
+
+    footer .navbar__footer{
+
+        &_img{
+            max-width: 100%;
+            width: $width-foot - 20px; //80px
+        }
+
+        .menu__footer{
+            &_link{
+                font-size: map-get($small-txt, tsize);
+            }
+        } 
+    
+        .text__footer{
+            &_p{
+                font-size: map-get($small-txt, tsize);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) { 
+    
+    /* FOOTER*/
+
+    footer .navbar__footer .text__footer {
+        &_p{
+            font-size: map-get($xsmall-txt, tsize);
+        }
+    }
+}
+
+@media screen and (max-width: 576px) { 
+
+    /* FOOTER */
+    
+    footer .navbar__footer{
+
+        &_img{
+            max-width: 100%;
+            width: $width-foot - 50px; //50px
+        }
+    }
+}
